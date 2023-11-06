@@ -39,16 +39,12 @@ def partition(array, low, high):
 def quickSort(array, low, high):
 	if low < high:
 
-		# Find pivot element such that
-		# element smaller than pivot are on the left
-		# element greater than pivot are on the right
 		pi = partition(array, low, high)
 
-		# Recursive call on the left of pivot
-		quickSort(array, low, pi - 1)
+		quickSort(array, low, pi-1)
 
-		# Recursive call on the right of pivot
-		quickSort(array, pi + 1, high)
+		quickSort(array, pi+1, high)
+		
 
 
 data = [1, 7, 4, 1, 10, 9, -2]
